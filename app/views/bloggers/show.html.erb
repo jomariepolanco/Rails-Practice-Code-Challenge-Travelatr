@@ -1,0 +1,20 @@
+<h1>This is the Show PaGE for your bloggers </h1>
+
+
+<p>Bloggers Name :<%= @blogger.name %></p>
+<p>Bloggers Age :<%= @blogger.age %></p>
+<p>Bloggers Bio :<%= @blogger.bio %></p>
+
+<% @blogger.posts.each do |post |%>
+<p> Blogger <%= post.title%> -  <%= post.likes%> </p>
+<%end %>
+
+<%= link_to "Top post ", post_path(@blogger.featured_post)%>
+
+
+
+<%# - The total likes on all of that blogger's posts
+	- A link to that blogger's featured post 
+    (the post with the most likes)
+	- **BONUS** A list of that user's top 5 most
+     written about destinations (the destinations with the most posts) %>
